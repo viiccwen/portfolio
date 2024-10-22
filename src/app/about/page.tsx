@@ -32,7 +32,7 @@ export default function AboutPage() {
             台灣科技大學資訊工程系 二年級
           </p>
           <p className="text-slate-500 dark:text-slate-400 font-sans">
-            "Be curious. Be passionate. Be creative."
+          &quot;Be curious. Be passionate. Be creative.&quot;
           </p>
         </div>
         <div className="flex gap-5">
