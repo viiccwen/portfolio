@@ -17,9 +17,7 @@ import {
   project_list,
   volunteer_list,
 } from "@/lib/experience";
-import { ArrowUp } from "lucide-react";
 import { Metadata } from "next";
-import Link from "next/link";
 
 export default function AboutPage() {
   return (
