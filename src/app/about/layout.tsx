@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { PortfolioCard } from "@/components/customs/portfolio-card";
 
@@ -22,14 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <div>
+          <div className="w-full min-h-screen flex justify-center mb-20">
+            <PortfolioCard>{children}</PortfolioCard>
+          </div>
+        </div>
       </body>
     </html>
   );

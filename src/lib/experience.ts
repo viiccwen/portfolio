@@ -35,7 +35,8 @@ export const volunteer_list: list_type[] = [
 
 export const project_list: list_type[] = [
   { des: "PartyTimes 都不揪？ | 會議安排系統", link: "https://partytimes.org/" },
-  { des: "GPA Calculator | GPA 計算機", link: "https://college-gpacalculator.vercel.app/" },
+  { des: "臺科第二學生宿舍系統 | 退宿預約系統", link: "https://github.com/viiccwen/dorm-reservation-system/tree/main" },
+  { des: "Pockety | 線上記帳 App", link: "https://pockety.vercel.app/" },
 ];
 
 export const intern_list: list_type[] = [
