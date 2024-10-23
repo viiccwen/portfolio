@@ -22,14 +22,14 @@ import { Metadata } from "next";
 export default function AboutPage() {
   return (
     <div>
-      <div className="flex flex-col items-center gap-10">
-        <p className="text-2xl font-bold">温冠華 VicWen</p>
+      <div className="flex flex-col items-center">
+        <p className="text-2xl font-bold my-5">温冠華 VicWen</p>
         <SelfPhoto src="/self-photo.jpg" />
         <div className="flex flex-col items-center">
-          <p className="text-slate-500 dark:text-slate-400 font-bold">
+          <p className="text-slate-500 dark:text-slate-400 font-bold mb-1">
             台灣科技大學資訊工程系 二年級
           </p>
-          <p className="text-slate-500 dark:text-slate-400 font-sans">
+          <p className="mb-5 text-slate-500 dark:text-slate-400 text-sm font-serif italic">
           &quot;Be curious. Be passionate. Be creative.&quot;
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function AboutPage() {
           description={project_list}
         />
         <ExperienceItem
-          title="實習經歷"
+          title="工作經歷"
           url="intern"
           key_des="intern"
           description={intern_list}
