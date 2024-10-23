@@ -34,12 +34,12 @@ export const volunteer_list: list_type[] = [
 ];
 
 export const project_list: list_type[] = [
-  { des: "PartyTimes 都不揪？ | 會議安排系統", link: "https://partytimes.org/" },
-  { des: "臺科第二學生宿舍系統 | 退宿預約系統", link: "https://github.com/viiccwen/dorm-reservation-system/tree/main" },
-  { des: "Pockety | 線上記帳 App", link: "https://pockety.vercel.app/" },
+  { des: "PartyTimes 都不揪？ | 會議安排系統" },
+  { des: "臺科第二學生宿舍系統 | 退宿預約系統" },
+  { des: "Pockety | 線上記帳 App" },
 ];
 
 export const intern_list: list_type[] = [
   { des: "Kiwis Security 資安實習生 | 創新創業見習生 (202403~202407)" },
   { des: "台灣科技大學 英語課程 TA (202309~present)" },
-]
+];

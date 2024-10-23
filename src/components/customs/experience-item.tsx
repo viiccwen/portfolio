@@ -12,16 +12,16 @@ interface ExperienceItemProps {
 }
 export const ExperienceItem = (props: ExperienceItemProps) => {
   return (
-    <div className="flex flex-col gap-2 font-bold text-sm md:text-xl">
+    <div className="flex flex-col font-bold text-sm md:text-xl">
       <div className=" text-slate-600 dark:text-slate-200 text-2xl">
         <div className="flex gap-3 items-center">
           {props.title}
         <Link href={`/about/${props.url}`}>
-          <CircleArrowRight />
+          <CircleArrowRight className="w-4" />
         </Link>
         </div>
       </div>
-      <Separator className="my-3 dark:bg-slate-500" />
+      <Separator className="my-3 dark:bg-slate-500 mb-6" />
       {props.description.map((d, index) =>
         d.link ? (
           <Link
@@ -33,7 +33,7 @@ export const ExperienceItem = (props: ExperienceItemProps) => {
             {d.des}
           </Link>
         ) : (
-          <p key={`${props.key_des}-${index}`}>{d.des}</p>
+          <p key={`${props.key_des}-${index}`} className="mb-1">{d.des}</p>
         )
       )}
     </div>
