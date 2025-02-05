@@ -1,17 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import {
-  MapPin,
-  Globe,
-  Phone,
-  Mail,
-  ChevronDown,
-  Instagram,
-  Linkedin,
-  Github,
-} from "lucide-react";
-import Image from "next/image";
+import { MapPin, Globe, Mail } from "lucide-react";
 import { ExperienceCard } from "@/components/customs/experience-card";
 import { ProjectCarousel } from "@/components/customs/project-carousel";
 import { TempBlock } from "@/components/customs/temp-block";
@@ -22,22 +11,34 @@ import {
   honor_list,
   community_list,
   presentation_list,
+  education_list,
+  techstack_list,
 } from "@/lib/lists";
 import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
 } from "@/components/customs/social-media-icon";
+import Image from "next/image";
 
 export default function Page() {
+  const techstacks = [...techstack_list, ...techstack_list];
+
   return (
     <main className="min-h-screen p-4 md:p-8">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-8 md:grid-cols-[400px_1fr]">
           {/* Left Column */}
           <div className="space-y-6">
-            <div className="overflow-hidden rounded-lg">
-              <TempBlock width="400" height="400" />
+            <div className="overflow-hidden rounded-lg flex justify-center">
+              <Image
+                src="/vicwen.jpg"
+                alt="Vic Wen"
+                width={400}
+                height={400}
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+              />
             </div>
 
             <div className="space-y-4">
@@ -63,15 +64,22 @@ export default function Page() {
 
               <div className="flex gap-3">
                 <Button variant="outline" size="icon" className="rounded-full">
-                  <InstagramIcon />
-                  <span className="sr-only">Instagram</span>
+                  <Link href="https://instagram.com/viiccwen" target="_blank">
+                    <InstagramIcon />
+                    <span className="sr-only">Instagram</span>
+                  </Link>
                 </Button>
                 <Button variant="outline" size="icon" className="rounded-full">
-                  <LinkedInIcon />
-                  <span className="sr-only">LinkedIn</span>
+                  <Link
+                    href="https://www.linkedin.com/in/guan-hua-wen-625bb0270/"
+                    target="_blank"
+                  >
+                    <LinkedInIcon />
+                    <span className="sr-only">LinkedIn</span>
+                  </Link>
                 </Button>
                 <Button variant="outline" size="icon" className="rounded-full">
-                  <Link href="https://github.com/viiccwen">
+                  <Link href="https://github.com/viiccwen" target="_blank">
                     <GitHubIcon />
                     <span className="sr-only">GitHub</span>
                   </Link>
@@ -109,12 +117,12 @@ export default function Page() {
                 <p>
                   I am Vic Wen, a passionate Software Engineer residing in the
                   city of Taipei, Taiwan. My expertise lies at the intersection
-                  of software development and community building.
+                  of software development and community building. I am currently
+                  expanding my skills in Machine Learning /Deep Learning.
                 </p>
                 <p>
-                  I have been working in the tech industry for over 5 years and
-                  have experience in various domains such as web development,
-                  UI/UX design, and marketing.
+                  I am always open to new opportunities and collaborations. Feel
+                  free to reach out—let’s connect and grow together! 🚀
                 </p>
               </div>
             </section>
@@ -147,33 +155,39 @@ export default function Page() {
 
             <section>
               <h2 className="mb-4 text-lg font-semibold">TECH STACK</h2>
-              <div className="grid grid-cols-3 gap-4 sm:grid-cols-6">
-                {[...Array(6)].map((_, i) => (
-                  <div
-                    key={`tech-${i}`}
-                    className="flex h-16 w-16 items-center justify-center rounded-lg bg-muted/30"
-                  >
-                    <div className="h-8 w-8 rounded-full bg-muted" />
-                  </div>
-                ))}
+              <div className="overflow-hidden">
+                <div className="flex items-center gap-4 animate-scroll whitespace-nowrap">
+                  {techstacks.map((tech, i) => (
+                    <Image
+                      key={i}
+                      src={tech.logo || ""}
+                      alt={tech.name || "logo"}
+                      width={48}
+                      height={48}
+                    />
+                  ))}
+                </div>
               </div>
             </section>
 
             <section>
-              <ProjectCarousel />
+              <div>
+                <h2 className="mb-4 text-lg font-semibold">PROJECT</h2>
+                <ProjectCarousel />
+              </div>
             </section>
 
             <section>
               <h2 className="mb-4 text-lg font-semibold">EDUCATION</h2>
 
               <div className="space-y-4">
-                {experience_list.map((experience, index) => (
+                {education_list.map((education, index) => (
                   <ExperienceCard
                     key={`education-${index}`}
-                    title={experience.title}
-                    subtitle={experience.subtitle}
-                    period={experience.period}
-                    logo={experience.logo}
+                    title={education.title}
+                    subtitle={education.subtitle}
+                    period={education.period}
+                    logo={education.logo}
                   />
                 ))}
               </div>
