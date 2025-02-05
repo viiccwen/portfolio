@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { project_list } from "@/lib/lists";
+import Link from "next/link";
 
 export const ProjectCarousel = () => {
   return (
@@ -48,8 +49,10 @@ export const ProjectCarousel = () => {
                       variant="ghost"
                       className="group px-0 text-primary hover:bg-transparent"
                     >
-                      Click to view{" "}
-                      <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      <Link className="flex" href={project.link} target="_blank">
+                        Click to view{" "}
+                        <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      </Link>
                     </Button>
                   </div>
                 </div>

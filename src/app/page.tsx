@@ -101,7 +101,7 @@ export default function Page() {
               </div>
 
               <div className="flex flex-col gap-3">
-                <Button variant="outline" className="w-full">
+                <Button variant="outline" className="w-full" disabled>
                   Download CV
                 </Button>
               </div>

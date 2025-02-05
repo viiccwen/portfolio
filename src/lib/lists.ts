@@ -44,14 +44,14 @@ export const project_list: project_type[] = [
     description:
       "A web application that helps users to arrange their meeting, party schedules.",
     imageUrl: "/partytimes.jpg",
-    link: "#",
+    link: "https://partytimes.org/",
   },
   {
     title: "NeoAcademy AI",
     description:
       "An AI-powered platform that helps students to learn knowledge more effectively.",
     imageUrl: "/neoacademy.jpg",
-    link: "#",
+    link: "https://neoacademy.vicwen.app/",
   },
 ];
 
