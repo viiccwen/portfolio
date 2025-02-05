@@ -88,7 +88,7 @@ export const techstack_list = [
   },
   {
     name: "mongodb",
-    logo: "/mongodb.png",
+    logo: "/mongo_db.png",
   },
   {
     name: "docker",
@@ -120,7 +120,7 @@ export const presentation_list: experience_type[] = [
     title: "SITCON",
     subtitle: "Speaker",
     period: "Mar 2025",
-    logo: "/sitcon.png",
+    logo: "/sitcon.jpg",
   },
   {
     title: "GDG DevFest Taipei",
