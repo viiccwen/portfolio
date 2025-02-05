@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Globe, Mail } from "lucide-react";
 import { ExperienceCard } from "@/components/customs/experience-card";
 import { ProjectCarousel } from "@/components/customs/project-carousel";
-import { TempBlock } from "@/components/customs/temp-block";
 import Link from "next/link";
 import {
   experience_list,
@@ -45,7 +44,7 @@ export default function Page() {
               <h1 className="text-3xl font-bold">
                 Hello 👋
                 <br />
-                I'm Vic Wen
+                I&apos;m Vic Wen
               </h1>
               <p className="text-lg text-muted-foreground">
                 Software Engineer
