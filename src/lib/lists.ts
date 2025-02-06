@@ -64,9 +64,15 @@ export const project_list: project_type[] = [
 
 export const honor_list: experience_type[] = [
   {
+    title: "5th",
+    subtitle: "2023 ITSA National Software Development Contest",
+    period: "Dec 2023",
+    logo: "/itsa.png",
+  },
+  {
     title: "Outstanding Youth",
     subtitle: "National Taiwan University of Science and Technology",
-    period: "2023",
+    period: "Dec 2024",
     logo: "/ntust.png",
   },
 ];

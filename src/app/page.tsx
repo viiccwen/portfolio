@@ -1,3 +1,4 @@
+"use client";
 import { Badge } from "@/components/ui/badge";
 import { ExperienceCard } from "@/components/customs/experience-card";
 import { ProjectCarousel } from "@/components/customs/project-carousel";
@@ -12,8 +13,24 @@ import {
 } from "@/lib/lists";
 import Image from "next/image";
 import { InfoBlock } from "@/components/customs/info-block";
+import { useTranslation } from "react-i18next";
+import i18n from "@/lib/i18n";
+import { useEffect, useState } from "react";
 
 export default function Page() {
+  const [lang, setLang] = useState("en-US");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setLang(navigator.language);
+    }
+  }, []);
+
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang]);
+
+  const { t } = useTranslation("translation", { i18n });
   const techstacks = [...techstack_list, ...techstack_list];
 
   return (
@@ -26,23 +43,23 @@ export default function Page() {
           {/* Right Column */}
           <div className="space-y-8">
             <section>
-              <h2 className="mb-4 text-lg font-semibold">ABOUT</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("ABOUT")}</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  I am Vic Wen, a passionate Software Engineer residing in the
-                  city of Taipei, Taiwan. My expertise lies at the intersection
-                  of software development and community building. I am currently
-                  expanding my skills in Machine Learning /Deep Learning.
+                  {t(
+                    "I am Vic Wen, a passionate Software Engineer residing in the city of Taipei, Taiwan. My expertise lies at the intersection of software development and community building. I am currently expanding my skills in Machine Learning /Deep Learning."
+                  )}
                 </p>
                 <p>
-                  I am always open to new opportunities and collaborations. Feel
-                  free to reach out—let’s connect and grow together! 🚀
+                  {t(
+                    "I am always open to new opportunities and collaborations. Feel free to reach out—let’s connect and grow together! 🚀"
+                  )}
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">SKILLS</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("SKILLS")}</h2>
               <div className="flex flex-wrap gap-2">
                 {skill_list.map((skill) => (
                   <Badge key={skill} variant="secondary" className="px-4 py-1">
@@ -53,7 +70,7 @@ export default function Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">EXPERIENCE</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("EXPERIENCE")}</h2>
               <div className="space-y-4">
                 {experience_list.map((experience, index) => (
                   <ExperienceCard
@@ -68,7 +85,7 @@ export default function Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">TECH STACK</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("TECH STACK")}</h2>
               <div className="overflow-hidden">
                 <div className="flex items-center gap-4 animate-scroll whitespace-nowrap">
                   {techstacks.map((tech, i) => (
@@ -86,13 +103,13 @@ export default function Page() {
 
             <section>
               <div>
-                <h2 className="mb-4 text-lg font-semibold">PROJECT</h2>
+                <h2 className="mb-4 text-lg font-semibold">{t("PROJECT")}</h2>
                 <ProjectCarousel />
               </div>
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">EDUCATION</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("EDUCATION")}</h2>
 
               <div className="space-y-4">
                 {education_list.map((education, index) => (
@@ -108,7 +125,7 @@ export default function Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">HONOR</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("HONOR")}</h2>
 
               <div className="space-y-4">
                 {honor_list.map((honor, index) => (
@@ -124,7 +141,7 @@ export default function Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">COMMUNITY</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("COMMUNITY")}</h2>
 
               <div className="space-y-4">
                 {community_list.map((community, index) => (
@@ -140,7 +157,9 @@ export default function Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">PRESENTATION</h2>
+              <h2 className="mb-4 text-lg font-semibold">
+                {t("PRESENTATION")}
+              </h2>
 
               <div className="space-y-4">
                 {presentation_list.map((presentation, index) => (

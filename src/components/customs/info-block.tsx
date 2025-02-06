@@ -75,10 +75,14 @@ export const InfoBlock = () => {
               <MapPin className="h-4 w-4" />
               <span>Taipei, Taiwan</span>
             </div>
-            <div className="flex items-center gap-2">
+            <Link
+              className="flex items-center gap-2"
+              href="https://blog.vicwen.app"
+              target="_blank"
+            >
               <Globe className="h-4 w-4" />
               <span>blog.vicwen.app</span>
-            </div>
+            </Link>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
               <span>viiccwen@gmail.com</span>

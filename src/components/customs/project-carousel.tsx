@@ -13,8 +13,12 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { project_list } from "@/lib/lists";
 import Link from "next/link";
+import i18n from "@/lib/i18n";
+import { useTranslation } from "react-i18next";
 
 export const ProjectCarousel = () => {
+  const { t } = useTranslation("translation", { i18n });
+
   return (
     <Carousel
       opts={{
@@ -41,16 +45,20 @@ export const ProjectCarousel = () => {
                     />
                   </div>
                   <div className="space-y-2 p-2">
-                    <h3 className="text-xl font-medium">{project.title}</h3>
+                    <h3 className="text-xl font-medium">{t(project.title)}</h3>
                     <p className="text-muted-foreground">
-                      {project.description}
+                      {t(project.description)}
                     </p>
                     <Button
                       variant="ghost"
                       className="group px-0 text-primary hover:bg-transparent"
                     >
-                      <Link className="flex" href={project.link} target="_blank">
-                        Click to view{" "}
+                      <Link
+                        className="flex"
+                        href={project.link}
+                        target="_blank"
+                      >
+                        {t("Click to view")}
                         <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                       </Link>
                     </Button>
