@@ -19,7 +19,7 @@ interface InfoBlockProps {
 export const InfoBlock = ({ lang, setLang }: InfoBlockProps) => {
   return (
     <div className="space-y-6">
-      <div className="fixed">
+      <div className="sm:fixed">
         <div className="overflow-hidden rounded-lg flex justify-center">
           <Image
             src="/vicwen.jpg"
