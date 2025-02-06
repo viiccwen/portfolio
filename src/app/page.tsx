@@ -1,4 +1,7 @@
 "use client";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
 import { ExperienceCard } from "@/components/customs/experience-card";
 import { ProjectCarousel } from "@/components/customs/project-carousel";
@@ -11,11 +14,8 @@ import {
   education_list,
   techstack_list,
 } from "@/lib/lists";
-import Image from "next/image";
 import { InfoBlock } from "@/components/customs/info-block";
-import { useTranslation } from "react-i18next";
 import i18n from "@/lib/i18n";
-import { useEffect, useState } from "react";
 
 export default function Page() {
   const [lang, setLang] = useState("en-US");
