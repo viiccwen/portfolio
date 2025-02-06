@@ -22,7 +22,7 @@ type project_type = {
 
 export const experience_list: experience_type[] = [
   {
-    title: "Cyber Security Intern",
+    title: "Intern",
     subtitle: "Kiwis Security",
     period: "Mar 2024 - July 2024",
     logo: "/kiwissec.png",
@@ -52,6 +52,13 @@ export const project_list: project_type[] = [
       "An AI-powered platform that helps students to learn knowledge more effectively.",
     imageUrl: "/neoacademy.jpg",
     link: "https://neoacademy.vicwen.app/",
+  },
+  {
+    title: "Emoji Store",
+    description:
+      "A NFT marketplace that allows users to buy and sell emojis based on Ethereum.",
+    imageUrl: "/emoji-store.png",
+    link: "https://emoji-store.vicwen.app/",
   },
   {
     title: "GPA Calculator",
@@ -96,14 +103,6 @@ export const techstack_list = [
     logo: "/prisma.png",
   },
   {
-    name: "python",
-    logo: "/python.png",
-  },
-  {
-    name: "langchain",
-    logo: "/langchain.jpg",
-  },
-  {
     name: "postgresql",
     logo: "/postgresql.png",
   },
@@ -114,6 +113,18 @@ export const techstack_list = [
   {
     name: "mongodb",
     logo: "/mongo_db.png",
+  },
+  {
+    name: "python",
+    logo: "/python.png",
+  },
+  {
+    name: "langchain",
+    logo: "/langchain.jpg",
+  },
+  {
+    name: "wagmi",
+    logo: "/wagmi.png",
   },
   {
     name: "docker",

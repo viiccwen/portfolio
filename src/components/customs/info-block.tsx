@@ -31,7 +31,7 @@ export const InfoBlock = ({ lang, setLang }: InfoBlockProps) => {
           />
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 mt-3">
           <h1 className="text-3xl font-bold">
             Hello 👋
             <br />
