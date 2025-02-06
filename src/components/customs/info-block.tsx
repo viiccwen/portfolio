@@ -77,7 +77,7 @@ export const InfoBlock = () => {
             </div>
             <div className="flex items-center gap-2">
               <Globe className="h-4 w-4" />
-              <span>vicwen.app</span>
+              <span>blog.vicwen.app</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4" />

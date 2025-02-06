@@ -53,6 +53,13 @@ export const project_list: project_type[] = [
     imageUrl: "/neoacademy.jpg",
     link: "https://neoacademy.vicwen.app/",
   },
+  {
+    title: "GPA Calculator",
+    description:
+      "A web application that helps students to calculate their GPA easily.",
+    imageUrl: "/gpa-calculator.png",
+    link: "https://gpa-calculator.vicwen.app/",
+  },
 ];
 
 export const honor_list: experience_type[] = [
@@ -71,8 +78,16 @@ export const techstack_list = [
     logo: "/typescript.png",
   },
   {
+    name: "javascript",
+    logo: "/javascript.png",
+  },
+  {
     name: "fastapi",
     logo: "/fastapi.png",
+  },
+  {
+    name: "prisma",
+    logo: "/prisma.png",
   },
   {
     name: "python",
@@ -85,6 +100,10 @@ export const techstack_list = [
   {
     name: "postgresql",
     logo: "/postgresql.png",
+  },
+  {
+    name: "mysql",
+    logo: "/mysql.svg",
   },
   {
     name: "mongodb",
