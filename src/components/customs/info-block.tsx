@@ -2,15 +2,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { MapPin, Globe, Mail } from "lucide-react";
+import { MapPin, Globe, Mail, Languages } from "lucide-react";
 import { Badge } from "../ui/badge";
 import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
 } from "@/components/customs/social-media-icon";
+import { Dispatch, SetStateAction } from "react";
 
-export const InfoBlock = () => {
+interface InfoBlockProps {
+  lang: string;
+  setLang: Dispatch<SetStateAction<string>>;
+}
+
+export const InfoBlock = ({ lang, setLang }: InfoBlockProps) => {
   return (
     <div className="space-y-6">
       <div className="fixed">
@@ -44,6 +50,12 @@ export const InfoBlock = () => {
             >
               Available for work
             </Badge>
+            <Button variant="outline" size="icon" className="rounded-full" onClick={() => {
+              
+              setLang(lang === "zh-TW" ? "en" : "zh-TW");
+            }}>
+              <Languages />
+            </Button>
           </div>
 
           <div className="flex gap-3">

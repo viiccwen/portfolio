@@ -38,7 +38,7 @@ export default function Page() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-8 md:grid-cols-[400px_1fr]">
           {/* Left Column */}
-          <InfoBlock />
+          <InfoBlock lang={lang} setLang={setLang} />
 
           {/* Right Column */}
           <div className="space-y-8">
