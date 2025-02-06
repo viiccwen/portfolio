@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
+"use client";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Globe, Mail } from "lucide-react";
 import { ExperienceCard } from "@/components/customs/experience-card";
 import { ProjectCarousel } from "@/components/customs/project-carousel";
-import Link from "next/link";
 import {
   experience_list,
   skill_list,
@@ -13,14 +11,26 @@ import {
   education_list,
   techstack_list,
 } from "@/lib/lists";
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-} from "@/components/customs/social-media-icon";
 import Image from "next/image";
+import { InfoBlock } from "@/components/customs/info-block";
+import { useTranslation } from "react-i18next";
+import i18n from "@/lib/i18n";
+import { useEffect, useState } from "react";
 
 export default function Page() {
+  const [lang, setLang] = useState("en-US");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setLang(navigator.language);
+    }
+  }, []);
+
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang]);
+
+  const { t } = useTranslation("translation", { i18n });
   const techstacks = [...techstack_list, ...techstack_list];
 
   return (
@@ -28,106 +38,28 @@ export default function Page() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-8 md:grid-cols-[400px_1fr]">
           {/* Left Column */}
-          <div className="space-y-6">
-            <div className="overflow-hidden rounded-lg flex justify-center">
-              <Image
-                src="/vicwen.jpg"
-                alt="Vic Wen"
-                width={400}
-                height={400}
-                style={{ objectFit: "cover" }}
-                className="rounded-lg"
-              />
-            </div>
-
-            <div className="space-y-4">
-              <h1 className="text-3xl font-bold">
-                Hello 👋
-                <br />
-                I&apos;m Vic Wen
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                Software Engineer
-                <br />
-                Technology & Community Enthusiast
-              </p>
-
-              <div className="flex items-center gap-2">
-                <Badge
-                  variant={"default"}
-                  className="bg-emerald-500 hover:bg-emerald-600"
-                >
-                  Available for work
-                </Badge>
-              </div>
-
-              <div className="flex gap-3">
-                <Button variant="outline" size="icon" className="rounded-full">
-                  <Link href="https://instagram.com/viiccwen" target="_blank">
-                    <InstagramIcon />
-                    <span className="sr-only">Instagram</span>
-                  </Link>
-                </Button>
-                <Button variant="outline" size="icon" className="rounded-full">
-                  <Link
-                    href="https://www.linkedin.com/in/guan-hua-wen-625bb0270/"
-                    target="_blank"
-                  >
-                    <LinkedInIcon />
-                    <span className="sr-only">LinkedIn</span>
-                  </Link>
-                </Button>
-                <Button variant="outline" size="icon" className="rounded-full">
-                  <Link href="https://github.com/viiccwen" target="_blank">
-                    <GitHubIcon />
-                    <span className="sr-only">GitHub</span>
-                  </Link>
-                </Button>
-              </div>
-
-              <div className="space-y-2 text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4" />
-                  <span>Taipei, Taiwan</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Globe className="h-4 w-4" />
-                  <span>vicwen.app</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4" />
-                  <span>viiccwen@gmail.com</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <Button variant="outline" className="w-full" disabled>
-                  Download CV
-                </Button>
-              </div>
-            </div>
-          </div>
+          <InfoBlock lang={lang} setLang={setLang} />
 
           {/* Right Column */}
           <div className="space-y-8">
             <section>
-              <h2 className="mb-4 text-lg font-semibold">ABOUT</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("ABOUT")}</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  I am Vic Wen, a passionate Software Engineer residing in the
-                  city of Taipei, Taiwan. My expertise lies at the intersection
-                  of software development and community building. I am currently
-                  expanding my skills in Machine Learning /Deep Learning.
+                  {t(
+                    "I am Vic Wen, a passionate Software Engineer residing in the city of Taipei, Taiwan. My expertise lies at the intersection of software development and community building. I am currently expanding my skills in Machine Learning /Deep Learning."
+                  )}
                 </p>
                 <p>
-                  I am always open to new opportunities and collaborations. Feel
-                  free to reach out—let’s connect and grow together! 🚀
+                  {t(
+                    "I am always open to new opportunities and collaborations. Feel free to reach out—let’s connect and grow together! 🚀"
+                  )}
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">SKILLS</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("SKILLS")}</h2>
               <div className="flex flex-wrap gap-2">
                 {skill_list.map((skill) => (
                   <Badge key={skill} variant="secondary" className="px-4 py-1">
@@ -138,7 +70,7 @@ export default function Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">EXPERIENCE</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("EXPERIENCE")}</h2>
               <div className="space-y-4">
                 {experience_list.map((experience, index) => (
                   <ExperienceCard
@@ -153,7 +85,7 @@ export default function Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">TECH STACK</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("TECH STACK")}</h2>
               <div className="overflow-hidden">
                 <div className="flex items-center gap-4 animate-scroll whitespace-nowrap">
                   {techstacks.map((tech, i) => (
@@ -171,13 +103,13 @@ export default function Page() {
 
             <section>
               <div>
-                <h2 className="mb-4 text-lg font-semibold">PROJECT</h2>
+                <h2 className="mb-4 text-lg font-semibold">{t("PROJECT")}</h2>
                 <ProjectCarousel />
               </div>
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">EDUCATION</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("EDUCATION")}</h2>
 
               <div className="space-y-4">
                 {education_list.map((education, index) => (
@@ -193,7 +125,7 @@ export default function Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">HONOR</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("HONOR")}</h2>
 
               <div className="space-y-4">
                 {honor_list.map((honor, index) => (
@@ -209,7 +141,7 @@ export default function Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">COMMUNITY</h2>
+              <h2 className="mb-4 text-lg font-semibold">{t("COMMUNITY")}</h2>
 
               <div className="space-y-4">
                 {community_list.map((community, index) => (
@@ -225,7 +157,9 @@ export default function Page() {
             </section>
 
             <section>
-              <h2 className="mb-4 text-lg font-semibold">PRESENTATION</h2>
+              <h2 className="mb-4 text-lg font-semibold">
+                {t("PRESENTATION")}
+              </h2>
 
               <div className="space-y-4">
                 {presentation_list.map((presentation, index) => (

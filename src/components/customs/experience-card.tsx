@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { Card } from "../ui/card";
 import { ChevronDown } from "lucide-react";
-import { TempBlock } from "./temp-block";
+import i18n from "@/lib/i18n";
+import { useTranslation } from "react-i18next";
 
 interface ExperienceCardProps {
   title: string;
@@ -18,6 +19,8 @@ export const ExperienceCard = ({
   period,
   logo,
 }: ExperienceCardProps) => {
+  const { t } = useTranslation("translation", { i18n });
+
   return (
     <Card className="p-4">
       {/* 預設垂直排列，sm（小型以上）改為橫向排列 */}
@@ -34,8 +37,8 @@ export const ExperienceCard = ({
           </div>
 
           <div className="flex-1 sm:text-left">
-            <h3 className="font-semibold">{title}</h3>
-            <p className="text-sm text-muted-foreground">{subtitle}</p>
+            <h3 className="font-semibold">{t(title)}</h3>
+            <p className="text-sm text-muted-foreground">{t(subtitle)}</p>
           </div>
         </div>
 
