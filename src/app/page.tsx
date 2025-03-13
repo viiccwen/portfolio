@@ -36,7 +36,7 @@ export default function Page() {
   return (
     <main className="min-h-screen p-4 md:p-8">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-8 md:grid-cols-[400px_1fr]">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-[400px_1fr]">
           {/* Left Column */}
           <InfoBlock lang={lang} setLang={setLang} />
 
