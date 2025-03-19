@@ -13,6 +13,11 @@ type experience_type = {
   logo: string;
 };
 
+type presentation_type = experience_type & {
+  text: string;
+  link: string;
+};
+
 type project_type = {
   title: string;
   description: string;
@@ -151,22 +156,28 @@ export const community_list: experience_type[] = [
   },
 ];
 
-export const presentation_list: experience_type[] = [
+export const presentation_list: presentation_type[] = [
   {
     title: "SITCON",
     subtitle: "Speaker",
+    text: "從『經營』到『領導』：社群領導經驗分享",
+    link: "https://sitcon.org/2025/agenda/62f54e/",
     period: "Mar 2025",
     logo: "/sitcon.jpg",
   },
   {
     title: "GDG DevFest Taipei",
     subtitle: "Speaker",
+    text: "Using LIT to Analyze Gemma Models in Keras.",
+    link: "https://www.facebook.com/photo.php?fbid=974863934668392&id=100064343845138&set=a.464222692399188",
     period: "Nov 2024",
     logo: "/devfest.webp",
   },
   {
     title: "COSCUP",
     subtitle: "Speaker",
+    text: "破除教育鴻溝：透過開源，偏鄉職生也能跳脫舒適框架",
+    link: "https://coscup.org/2024/zh-TW/session/RR9NV8",
     period: "Aug 2024",
     logo: "/coscup.png",
   },

@@ -50,10 +50,14 @@ export const InfoBlock = ({ lang, setLang }: InfoBlockProps) => {
             >
               Available for work
             </Badge>
-            <Button variant="outline" size="icon" className="rounded-full" onClick={() => {
-              
-              setLang(lang === "zh-TW" ? "en" : "zh-TW");
-            }}>
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full"
+              onClick={() => {
+                setLang(lang === "zh-TW" ? "en" : "zh-TW");
+              }}
+            >
               <Languages />
             </Button>
           </div>
