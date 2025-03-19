@@ -47,12 +47,12 @@ export default function Page() {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   {t(
-                    "I am Vic Wen, a passionate Software Engineer residing in the city of Taipei, Taiwan. My expertise lies at the intersection of software development and community building. I am currently expanding my skills in Machine Learning /Deep Learning."
+                    "I am Vic Wen, a passionate Software Engineer residing in the city of Taipei, Taiwan. My expertise lies at the intersection of software development and community building. I am currently expanding my skills in Machine Learning /Deep Learning.",
                   )}
                 </p>
                 <p>
                   {t(
-                    "I am always open to new opportunities and collaborations. Feel free to reach out—let’s connect and grow together! 🚀"
+                    "I am always open to new opportunities and collaborations. Feel free to reach out—let’s connect and grow together! 🚀",
                   )}
                 </p>
               </div>
