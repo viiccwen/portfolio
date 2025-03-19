@@ -166,6 +166,7 @@ export default function Page() {
                   <ExperienceCard
                     key={`presentation-${index}`}
                     title={presentation.title}
+                    text={presentation.text}
                     subtitle={presentation.subtitle}
                     period={presentation.period}
                     logo={presentation.logo}
