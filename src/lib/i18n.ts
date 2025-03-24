@@ -28,6 +28,8 @@ const resources = {
       Intern: "實習生",
       "National Taiwan University of Science and Technology":
         "國立臺灣科技大學",
+      "Software Engineering Practice Award": "軟體工程實踐獎",
+      "2025 Coding 101": "2025 Coding 101 大學軟體創作競賽",
       "5th": "第五名",
       "2023 ITSA National Software Development Contest":
         "2023 ITSA 全國大專程式設計極客挑戰賽",

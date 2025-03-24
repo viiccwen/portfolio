@@ -151,6 +151,8 @@ export default function Page() {
                     subtitle={community.subtitle}
                     period={community.period}
                     logo={community.logo}
+                    text={community.text}
+                    link={community.link}
                   />
                 ))}
               </div>
