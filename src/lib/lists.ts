@@ -25,6 +25,11 @@ type project_type = {
   link: string;
 };
 
+type community_type = experience_type & {
+  text: string;
+  link: string;
+};
+
 export const experience_list: experience_type[] = [
   {
     title: "Intern",
@@ -56,7 +61,7 @@ export const project_list: project_type[] = [
     description:
       "An AI-powered platform that helps students to learn knowledge more effectively.",
     imageUrl: "/neoacademy.jpg",
-    link: "https://neoacademy.vicwen.app/",
+    link: "https://github.com/viiccwen/neoAcademy/",
   },
   {
     title: "Emoji Store",
@@ -75,6 +80,12 @@ export const project_list: project_type[] = [
 ];
 
 export const honor_list: experience_type[] = [
+  {
+    title: "Software Engineering Practice Award",
+    subtitle: "2025 Coding 101",
+    period: "Mar 2025",
+    logo: "/coding101.png",
+  },
   {
     title: "5th",
     subtitle: "2023 ITSA National Software Development Contest",
@@ -141,16 +152,20 @@ export const techstack_list = [
   },
 ];
 
-export const community_list: experience_type[] = [
+export const community_list: community_type[] = [
   {
-    title: "Lead",
-    subtitle: "GDG on Campus NTUST",
+    title: "GDG on Campus NTUST",
+    subtitle: "Lead",
+    text: "Google Developer Groups Community",
+    link: "https://gdg.community.dev/gdg-on-campus-national-taiwan-university-of-science-and-technology-taipei-taiwan/",
     period: "Sep 2024 - June 2025",
     logo: "/GDGC_NTUST.jpg",
   },
   {
-    title: "Lead",
-    subtitle: "Computer Science Student Association",
+    title: "Computer Science Student Association",
+    subtitle: "Lead",
+    text: "Instagram",
+    link: "https://instagram.com/ntustcsie/",
     period: "Sep 2024 - June 2025",
     logo: "/NTUST_CSIE.png",
   },
