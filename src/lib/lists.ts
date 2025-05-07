@@ -1,16 +1,9 @@
-export const skill_list = [
-  "Machine Learning",
-  "Deep Learning",
-  "Front-end development",
-  "Back-end development",
-  "Blockchain",
-];
-
 type experience_type = {
   title: string;
   subtitle: string;
   period: string;
   logo: string;
+  description?: string[];
 };
 
 type presentation_type = experience_type & {
@@ -30,12 +23,25 @@ type community_type = experience_type & {
   link: string;
 };
 
+export const skill_list = [
+  "Backend",
+  "Frontend",
+  "Machine Learning",
+  "Deep Learning",
+  "Project Management",
+  "Community Building",
+];
+
 export const experience_list: experience_type[] = [
   {
     title: "Intern",
     subtitle: "Kiwis Security",
     period: "Mar 2024 - July 2024",
     logo: "/kiwissec.png",
+    description: [
+      "Utilized PHP, JavaScript, MySQL, and Burp Suite to design real-world web application vulnerabilities. Created attack scenarios to showcase how these vulnerabilities are exploited.",
+      "Developed over five entry-to-intermediate level web penetration testing courses. Each course included handson labs that covered key topics such as network security, session management flaws, and web application firewall bypass techniques, ensuring students received practical exposure to web security challenges.",
+    ],
   },
 ];
 
@@ -45,6 +51,9 @@ export const education_list: experience_type[] = [
     subtitle: "Bachelor of Science in Computer Science",
     period: "Sep 2023 - June 2027",
     logo: "/ntust.png",
+    description: [
+      "Currently pursuing a second year in the Department of Computer Science and Information Engineering, with a GPA of 4.20/4.30, ranking third in the department (Top 5%).",
+    ],
   },
 ];
 
@@ -85,6 +94,11 @@ export const honor_list: experience_type[] = [
     subtitle: "2025 Coding 101",
     period: "Mar 2025",
     logo: "/coding101.png",
+    description: [
+      "Developed an AI-powered full-stack learning platform using React.js, TypeScript, TailwindCSS, Express.js, MongoDB, and Langchain, enabling personalized quizzes and adaptive learning recommendations.",
+      "Implemented CI/CD pipelines with GitHub Actions and Docker, integrating and deploying the application as Docker image on Zeabur for seamless and scalable hosting.",
+      "Collaborated with a team using Git and GitHub for version control, ensuring efficient code management and smooth project coordination throughout the development lifecycle.",
+    ],
   },
   {
     title: "5th",
@@ -150,6 +164,14 @@ export const techstack_list = [
     name: "github-actions",
     logo: "/github-actions.png",
   },
+  {
+    name: "redis",
+    logo: "/redis.png",
+  },
+  {
+    name: "websocket",
+    logo: "/websocket.png",
+  },
 ];
 
 export const community_list: community_type[] = [
@@ -160,6 +182,10 @@ export const community_list: community_type[] = [
     link: "https://gdg.community.dev/gdg-on-campus-national-taiwan-university-of-science-and-technology-taipei-taiwan/",
     period: "Sep 2024 - June 2025",
     logo: "/GDGC_NTUST.jpg",
+    description: [
+      "Delivered an AI-Workshop at DevFest Taipei 2024, teaching LIT to analyze gemma model in keras.",
+      "Sharing fundamental knowledge and applications of ML/DL, Frontend, Backend, Google Cloud, Linux, Git.",
+    ],
   },
   {
     title: "Computer Science Student Association",
@@ -168,6 +194,10 @@ export const community_list: community_type[] = [
     link: "https://instagram.com/ntustcsie/",
     period: "Sep 2024 - June 2025",
     logo: "/NTUST_CSIE.png",
+    description: [
+      "Leading a team of 10+ members to organize events and activities for the Computer Science Department.",
+      "Organizing events such as hackathons, workshops with GDG On Campus NTUST to promote technical skills and teamwork.",
+    ],
   },
 ];
 

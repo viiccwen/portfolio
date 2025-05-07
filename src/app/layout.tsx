@@ -10,7 +10,10 @@ export const metadata: Metadata = {
     template: "VicWen",
     default: "VicWen's Profile",
   },
-  description: "Portfolio",
+  description: "Portfolio of Vic Wen",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

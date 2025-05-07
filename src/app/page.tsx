@@ -47,12 +47,12 @@ export default function Page() {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   {t(
-                    "I am Vic Wen, a passionate Software Engineer residing in the city of Taipei, Taiwan. My expertise lies at the intersection of software development and community building. I am currently expanding my skills in Machine Learning /Deep Learning."
+                    "I am Vic Wen, a passionate Software Engineer residing in the city of Taipei, Taiwan. My expertise lies at the intersection of software development and community building. I am currently expanding my skills in Machine Learning /Deep Learning.",
                   )}
                 </p>
                 <p>
                   {t(
-                    "I am always open to new opportunities and collaborations. Feel free to reach out—let’s connect and grow together! 🚀"
+                    "I am always open to new opportunities and collaborations. Feel free to reach out—let's connect and grow together! 🚀",
                   )}
                 </p>
               </div>
@@ -79,6 +79,7 @@ export default function Page() {
                     subtitle={experience.subtitle}
                     period={experience.period}
                     logo={experience.logo}
+                    description={experience.description}
                   />
                 ))}
               </div>
@@ -86,7 +87,7 @@ export default function Page() {
 
             <section>
               <h2 className="mb-4 text-lg font-semibold">{t("TECH STACK")}</h2>
-              <div className="overflow-hidden">
+              <div className="overflow-hidden group [--scroll-speed:25s] group-hover:[--scroll-speed:40s]">
                 <div className="flex items-center gap-4 animate-scroll whitespace-nowrap">
                   {techstacks.map((tech, i) => (
                     <Image
@@ -95,6 +96,7 @@ export default function Page() {
                       alt={tech.name || "logo"}
                       width={48}
                       height={48}
+                      className="transition-transform hover:scale-110"
                     />
                   ))}
                 </div>
@@ -119,6 +121,7 @@ export default function Page() {
                     subtitle={education.subtitle}
                     period={education.period}
                     logo={education.logo}
+                    description={education.description}
                   />
                 ))}
               </div>
@@ -135,6 +138,7 @@ export default function Page() {
                     subtitle={honor.subtitle}
                     period={honor.period}
                     logo={honor.logo}
+                    description={honor.description}
                   />
                 ))}
               </div>
@@ -153,6 +157,7 @@ export default function Page() {
                     logo={community.logo}
                     text={community.text}
                     link={community.link}
+                    description={community.description}
                   />
                 ))}
               </div>
@@ -173,6 +178,7 @@ export default function Page() {
                     subtitle={presentation.subtitle}
                     period={presentation.period}
                     logo={presentation.logo}
+                    description={presentation.description}
                   />
                 ))}
               </div>
