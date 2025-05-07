@@ -10,13 +10,27 @@ import {
   LinkedInIcon,
 } from "@/components/customs/social-media-icon";
 import { Dispatch, SetStateAction } from "react";
+import { useTranslation } from "react-i18next";
+import i18n from "@/lib/i18n";
 
 interface InfoBlockProps {
   lang: string;
   setLang: Dispatch<SetStateAction<string>>;
 }
 
+const CV_URL = {
+  "zh-TW":
+    "https://pdfs.cakeresume.com/user_pdfs/43179713-d9db-49ac-b8e3-53b9cab3d958.pdf",
+  en: "https://pdfs.cakeresume.com/user_pdfs/4939ee21-ebec-49cd-8b70-841e4875da06.pdf",
+};
+
 export const InfoBlock = ({ lang, setLang }: InfoBlockProps) => {
+  const { t } = useTranslation("translation", { i18n });
+
+  const handleOpenCV = (lang: "zh-TW" | "en") => {
+    window.open(CV_URL[lang], "_blank");
+  };
+
   return (
     <div className="space-y-6">
       <div className="sm:fixed">
@@ -105,9 +119,20 @@ export const InfoBlock = ({ lang, setLang }: InfoBlockProps) => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-3">
-            <Button variant="outline" className="w-full" disabled>
-              Download CV
+          <div className="flex gap-3">
+            <Button
+              variant="outline"
+              className="w-full"
+              onClick={() => handleOpenCV("zh-TW")}
+            >
+              {t("CV (Mandarin)")}
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full"
+              onClick={() => handleOpenCV("en")}
+            >
+              {t("CV (English)")}
             </Button>
           </div>
         </div>
