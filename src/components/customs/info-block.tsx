@@ -60,10 +60,17 @@ export const InfoBlock = ({ lang, setLang }: InfoBlockProps) => {
           <div className="flex items-center gap-2">
             <Badge
               variant={"default"}
+              className="bg-blue-500 hover:bg-blue-600"
+            >
+              Currently Employed
+            </Badge>
+
+            {/* <Badge
+              variant={"default"}
               className="bg-emerald-500 hover:bg-emerald-600"
             >
               Available for work
-            </Badge>
+            </Badge> */}
             <Button
               variant="outline"
               size="icon"
@@ -124,6 +131,7 @@ export const InfoBlock = ({ lang, setLang }: InfoBlockProps) => {
               variant="outline"
               className="w-full"
               onClick={() => handleOpenCV("zh-TW")}
+              disabled={true}
             >
               {t("CV (Mandarin)")}
             </Button>
@@ -131,6 +139,7 @@ export const InfoBlock = ({ lang, setLang }: InfoBlockProps) => {
               variant="outline"
               className="w-full"
               onClick={() => handleOpenCV("en")}
+              disabled={true}
             >
               {t("CV (English)")}
             </Button>

@@ -42,6 +42,7 @@ export default function Page() {
 
           {/* Right Column */}
           <div className="space-y-8">
+            {/* about */}
             <section>
               <h2 className="mb-4 text-lg font-semibold">{t("ABOUT")}</h2>
               <div className="space-y-4 text-muted-foreground">
@@ -58,6 +59,7 @@ export default function Page() {
               </div>
             </section>
 
+            {/* skills */}
             <section>
               <h2 className="mb-4 text-lg font-semibold">{t("SKILLS")}</h2>
               <div className="flex flex-wrap gap-2">
@@ -69,6 +71,7 @@ export default function Page() {
               </div>
             </section>
 
+            {/* experience */}
             <section>
               <h2 className="mb-4 text-lg font-semibold">{t("EXPERIENCE")}</h2>
               <div className="space-y-4">
@@ -85,6 +88,7 @@ export default function Page() {
               </div>
             </section>
 
+            {/* tech stack */}
             <section>
               <h2 className="mb-4 text-lg font-semibold">{t("TECH STACK")}</h2>
               <div className="overflow-hidden group [--scroll-speed:25s] group-hover:[--scroll-speed:40s]">
@@ -103,6 +107,7 @@ export default function Page() {
               </div>
             </section>
 
+            {/* project */}
             <section>
               <div>
                 <h2 className="mb-4 text-lg font-semibold">{t("PROJECT")}</h2>
@@ -110,6 +115,7 @@ export default function Page() {
               </div>
             </section>
 
+            {/* education */}
             <section>
               <h2 className="mb-4 text-lg font-semibold">{t("EDUCATION")}</h2>
 
@@ -127,6 +133,7 @@ export default function Page() {
               </div>
             </section>
 
+            {/* honor */}
             <section>
               <h2 className="mb-4 text-lg font-semibold">{t("HONOR")}</h2>
 
@@ -144,6 +151,7 @@ export default function Page() {
               </div>
             </section>
 
+            {/* community */}
             <section>
               <h2 className="mb-4 text-lg font-semibold">{t("COMMUNITY")}</h2>
 
@@ -163,6 +171,7 @@ export default function Page() {
               </div>
             </section>
 
+            {/* presentation */}
             <section>
               <h2 className="mb-4 text-lg font-semibold">
                 {t("PRESENTATION")}

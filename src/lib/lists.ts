@@ -34,6 +34,12 @@ export const skill_list = [
 
 export const experience_list: experience_type[] = [
   {
+    title: "Backend Intern",
+    subtitle: "Fantasy X Games",
+    period: "Jul 2025 - Present",
+    logo: "/fxgames.png",
+  },
+  {
     title: "Intern",
     subtitle: "Kiwis Security",
     period: "Mar 2024 - July 2024",
@@ -52,7 +58,7 @@ export const education_list: experience_type[] = [
     period: "Sep 2023 - June 2027",
     logo: "/ntust.png",
     description: [
-      "Currently pursuing a second year in the Department of Computer Science and Information Engineering, with a GPA of 4.20/4.30, ranking third in the department (Top 5%).",
+      "Currently pursuing a second year in the Department of Computer Science and Information Engineering, with a GPA of 4.18/4.30, ranking third in the department (Top 5%).",
     ],
   },
 ];
@@ -73,11 +79,10 @@ export const project_list: project_type[] = [
     link: "https://github.com/viiccwen/neoAcademy/",
   },
   {
-    title: "Emoji Store",
-    description:
-      "A NFT marketplace that allows users to buy and sell emojis based on Ethereum.",
-    imageUrl: "/emoji-store.png",
-    link: "https://emoji-store.vicwen.app/",
+    title: "FindOne",
+    description: "A real-time AI detection game powered by Vue.js and ASP.NET.",
+    imageUrl: "/findone.jpg",
+    link: "https://github.com/viiccwen/findone",
   },
   {
     title: "GPA Calculator",
@@ -85,6 +90,13 @@ export const project_list: project_type[] = [
       "A web application that helps students to calculate their GPA easily.",
     imageUrl: "/gpa-calculator.png",
     link: "https://gpa-calculator.vicwen.app/",
+  },
+  {
+    title: "Help Dream Scholarship Notify Bot",
+    description:
+      "A Telegram bot that helps students to get the latest scholarship information.",
+    imageUrl: "/help-dream.png",
+    link: "https://github.com/viiccwen/help-dream-scholarship-notify-bot",
   },
 ];
 
@@ -115,6 +127,8 @@ export const honor_list: experience_type[] = [
 ];
 
 export const techstack_list = [
+  { name: "Golang", logo: "/golang.png" },
+  { name: "Fiber", logo: "/fiber.webp" },
   { name: "Nextjs", logo: "/nextjs.png" },
   {
     name: "TypeScript",
