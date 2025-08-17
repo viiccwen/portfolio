@@ -1,9 +1,17 @@
+// About section content
+export const about_content = {
+  introduction:
+    "I am Vic, a passionate Software Engineer who loves open source contribution and community building. Besides full-stack development, I'm currently researching AI Agent and cloud services.",
+  conclusion:
+    "I am always open to new opportunities and collaborations. Feel free to reach out—let's connect and grow together! 🚀",
+};
+
 type experience_type = {
   title: string;
   subtitle: string;
   period: string;
   logo: string;
-  description?: string[];
+  description?: (string | { text: string; link?: string })[];
 };
 
 type presentation_type = experience_type & {
@@ -24,23 +32,26 @@ type community_type = experience_type & {
 };
 
 export const skill_list = [
-  "Backend",
-  "Frontend",
-  "Machine Learning",
-  "Deep Learning",
-  "Project Management",
+  "Full-stack",
+  "Software Engineering",
+  "Open Source",
   "Community Building",
 ];
 
 export const experience_list: experience_type[] = [
   {
-    title: "Backend Intern",
+    title: "Backend Engineer Internship",
     subtitle: "Fantasy X Games",
     period: "Jul 2025 - Present",
     logo: "/fxgames.png",
+    description: [
+      "Integrated internal tools into a unified system using React, TypeScript, Golang, PostgreSQL to improve internal workflow efficiency.",
+      "Built an automated ETL pipeline using Apache Airflow to streamline data processing and analytics workflows.",
+      "Implemented ClickHouse database solutions for improving data compression and cold storage migration strategies.",
+    ],
   },
   {
-    title: "Intern",
+    title: "Cyber Security Internship",
     subtitle: "Kiwis Security",
     period: "Mar 2024 - July 2024",
     logo: "/kiwissec.png",
@@ -59,6 +70,69 @@ export const education_list: experience_type[] = [
     logo: "/ntust.png",
     description: [
       "Currently pursuing a second year in the Department of Computer Science and Information Engineering, with a GPA of 4.18/4.30, ranking third in the department (Top 5%).",
+    ],
+  },
+];
+
+export const open_source_list: experience_type[] = [
+  {
+    title: "Apache/airflow",
+    subtitle: "41.6k stars • Contributor",
+    period: "July 2025 - Present",
+    logo: "/airflow.png",
+    description: [
+      {
+        text: "Ensure AWS ORM initialization and improve session configuration handling (#54582)",
+        link: "https://github.com/apache/airflow/pull/54582",
+      },
+      {
+        text: "Fix module loading in logging config (#54555)",
+        link: "https://github.com/apache/airflow/pull/54555",
+      },
+    ],
+  },
+  {
+    title: "astronomer/dag-factory",
+    subtitle: "1.3k stars • Top 12 contributor",
+    period: "July 2025 - Present",
+    logo: "/astronomer.jpeg",
+    description: [
+      {
+        text: "Fix file URI format in ObjectStoragePath example to prevent duplicate slashes (#556)",
+        link: "https://github.com/astronomer/dag-factory/pull/556",
+      },
+      {
+        text: "Fix incorrect load_yaml_dags parameter usage (#555)",
+        link: "https://github.com/astronomer/dag-factory/pull/555",
+      },
+      {
+        text: "Update pyproject.toml to Sync Test Versions with CI/CD Pipeline (#553)",
+        link: "https://github.com/astronomer/dag-factory/pull/553",
+      },
+      {
+        text: "Enhance PyPI Stats API error handling (#535)",
+        link: "https://github.com/astronomer/dag-factory/pull/535",
+      },
+      {
+        text: "Remove schedule_interval parameter (#503)",
+        link: "https://github.com/astronomer/dag-factory/pull/503",
+      },
+    ],
+  },
+  {
+    title: "guptarohit/asciigraph",
+    subtitle: "2.9k stars • Contributor",
+    period: "July 2025 - Present",
+    logo: "/asciigraph.jpeg",
+    description: [
+      {
+        text: "fix: display values for Y-axis when data points are all identical (#65)",
+        link: "https://github.com/guptarohit/asciigraph/pull/65",
+      },
+      {
+        text: "fix(legend): prevent panic when only legends are set without series colors (#64)",
+        link: "https://github.com/guptarohit/asciigraph/pull/64",
+      },
     ],
   },
 ];

@@ -17,7 +17,7 @@ interface ExperienceCardProps {
   link?: string;
   period: string;
   logo: string;
-  description?: string[];
+  description?: (string | { text: string; link?: string })[];
 }
 
 export const ExperienceCard = ({
@@ -86,12 +86,29 @@ export const ExperienceCard = ({
             className="overflow-hidden"
           >
             <div className="mt-4 text-sm text-muted-foreground space-y-2">
-              {description.map((item, index) => (
-                <p key={index} className="flex items-start gap-2">
-                  <span className="text-muted-foreground">•</span>
-                  {t(item)}
-                </p>
-              ))}
+              {description.map((item, index) => {
+                const { text, link } =
+                  typeof item === "string"
+                    ? { text: item, link: undefined }
+                    : { text: item.text, link: item.link };
+
+                return (
+                  <p key={index} className="flex items-start gap-2">
+                    <span className="text-muted-foreground">•</span>
+                    {link ? (
+                      <Link
+                        href={link}
+                        target="_blank"
+                        className="hover:underline"
+                      >
+                        {t(text)}
+                      </Link>
+                    ) : (
+                      t(text)
+                    )}
+                  </p>
+                );
+              })}
             </div>
           </motion.div>
         )}

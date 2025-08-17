@@ -13,6 +13,8 @@ import {
   presentation_list,
   education_list,
   techstack_list,
+  open_source_list,
+  about_content,
 } from "@/lib/lists";
 import { InfoBlock } from "@/components/customs/info-block";
 import i18n from "@/lib/i18n";
@@ -46,16 +48,8 @@ export default function Page() {
             <section>
               <h2 className="mb-4 text-lg font-semibold">{t("ABOUT")}</h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  {t(
-                    "I am Vic Wen, a passionate Software Engineer residing in the city of Taipei, Taiwan. My expertise lies at the intersection of software development and community building. I am currently expanding my skills in Machine Learning /Deep Learning.",
-                  )}
-                </p>
-                <p>
-                  {t(
-                    "I am always open to new opportunities and collaborations. Feel free to reach out—let's connect and grow together! 🚀",
-                  )}
-                </p>
+                <p>{t(about_content.introduction)}</p>
+                <p>{t(about_content.conclusion)}</p>
               </div>
             </section>
 
@@ -67,6 +61,23 @@ export default function Page() {
                   <Badge key={skill} variant="secondary" className="px-4 py-1">
                     {skill}
                   </Badge>
+                ))}
+              </div>
+            </section>
+
+            {/* open source */}
+            <section>
+              <h2 className="mb-4 text-lg font-semibold">{t("OPEN SOURCE")}</h2>
+              <div className="space-y-4">
+                {open_source_list.map((open_source, index) => (
+                  <ExperienceCard
+                    key={`open-source-${index}`}
+                    title={open_source.title}
+                    subtitle={open_source.subtitle}
+                    period={open_source.period}
+                    logo={open_source.logo}
+                    description={open_source.description}
+                  />
                 ))}
               </div>
             </section>
