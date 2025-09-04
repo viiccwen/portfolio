@@ -77,13 +77,17 @@ export const education_list: experience_type[] = [
 export const open_source_list: experience_type[] = [
   {
     title: "Apache/airflow",
-    subtitle: "41.6k stars • Contributor",
+    subtitle: "42.0k stars • Contributor",
     period: "July 2025 - Present",
     logo: "/airflow.png",
     description: [
       {
-        text: "Ensure AWS ORM initialization and improve session configuration handling (#54582)",
-        link: "https://github.com/apache/airflow/pull/54582",
+        text: "Feat: add support for opening trigger modal via URL pre-populated (#55277)",
+        link: "https://github.com/apache/airflow/pull/55277",
+      },
+      {
+        text: "UI: add vertical scroll to sidebar to prevent plugin cutoff (#55265)",
+        link: "https://github.com/apache/airflow/pull/55265",
       },
       {
         text: "Fix module loading in logging config (#54555)",
@@ -93,10 +97,18 @@ export const open_source_list: experience_type[] = [
   },
   {
     title: "astronomer/dag-factory",
-    subtitle: "1.3k stars • Top 12 contributor",
+    subtitle: "1.3k stars • Top 7 contributor",
     period: "July 2025 - Present",
     logo: "/astronomer.jpeg",
     description: [
+      {
+        text: "docs: Make markdownlint happy (fix MD007 ul-indent in dev/README.md) (#566)",
+        link: "https://github.com/astronomer/dag-factory/pull/566",
+      },
+      {
+        text: "Fix typos in scheduling and datasets docs (#565)",
+        link: "https://github.com/astronomer/dag-factory/pull/565",
+      },
       {
         text: "Fix file URI format in ObjectStoragePath example to prevent duplicate slashes (#556)",
         link: "https://github.com/astronomer/dag-factory/pull/556",
