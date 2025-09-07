@@ -76,17 +76,20 @@ export const education_list: experience_type[] = [
 
 export const open_source_list: experience_type[] = [
   {
-    title: "Apache/airflow",
-    subtitle: "42.0k stars • Contributor",
+    title: "apache/airflow",
+    subtitle: "42.2k stars • Contributor",
     period: "July 2025 - Present",
     logo: "/airflow.png",
     description: [
       {
-        text: "Feat: add support for opening trigger modal via URL pre-populated (#55277)",
+        text: "Contributed to Apache Airflow, including api server feature & fixes.",
+      },
+      {
+        text: "Add support for opening trigger modal via URL pre-populated (#55277)",
         link: "https://github.com/apache/airflow/pull/55277",
       },
       {
-        text: "UI: add vertical scroll to sidebar to prevent plugin cutoff (#55265)",
+        text: "Show collapsible plugin menu when plugins more than or equal 2 (#55265)",
         link: "https://github.com/apache/airflow/pull/55265",
       },
       {
@@ -102,48 +105,8 @@ export const open_source_list: experience_type[] = [
     logo: "/astronomer.jpeg",
     description: [
       {
-        text: "docs: Make markdownlint happy (fix MD007 ul-indent in dev/README.md) (#566)",
-        link: "https://github.com/astronomer/dag-factory/pull/566",
-      },
-      {
-        text: "Fix typos in scheduling and datasets docs (#565)",
-        link: "https://github.com/astronomer/dag-factory/pull/565",
-      },
-      {
-        text: "Fix file URI format in ObjectStoragePath example to prevent duplicate slashes (#556)",
-        link: "https://github.com/astronomer/dag-factory/pull/556",
-      },
-      {
-        text: "Fix incorrect load_yaml_dags parameter usage (#555)",
-        link: "https://github.com/astronomer/dag-factory/pull/555",
-      },
-      {
-        text: "Update pyproject.toml to Sync Test Versions with CI/CD Pipeline (#553)",
-        link: "https://github.com/astronomer/dag-factory/pull/553",
-      },
-      {
-        text: "Enhance PyPI Stats API error handling (#535)",
-        link: "https://github.com/astronomer/dag-factory/pull/535",
-      },
-      {
-        text: "Remove schedule_interval parameter (#503)",
-        link: "https://github.com/astronomer/dag-factory/pull/503",
-      },
-    ],
-  },
-  {
-    title: "guptarohit/asciigraph",
-    subtitle: "2.9k stars • Contributor",
-    period: "July 2025 - Present",
-    logo: "/asciigraph.jpeg",
-    description: [
-      {
-        text: "fix: display values for Y-axis when data points are all identical (#65)",
-        link: "https://github.com/guptarohit/asciigraph/pull/65",
-      },
-      {
-        text: "fix(legend): prevent panic when only legends are set without series colors (#64)",
-        link: "https://github.com/guptarohit/asciigraph/pull/64",
+        text: "Top 7 contributor with over 7 PRs merged, including breaking changes & fixes.",
+        link: "https://github.com/astronomer/dag-factory/pulls?q=is%3Apr+is%3Amerged+author%3Aviiccwen",
       },
     ],
   },
@@ -187,6 +150,23 @@ export const project_list: project_type[] = [
 ];
 
 export const honor_list: experience_type[] = [
+  {
+    title: "Database Bottom-Level Architecture to Application Practice",
+    subtitle: "2025 iThome Ironman Challnge",
+    period: "Aug 2025",
+    logo: "/clickhouse.svg",
+    description: [
+      {
+        text: "Completed 30 days of writing articles on ClickHouse, covering from the bottom of the database to the application layer.",
+        link: "https://ithelp.ithome.com.tw/users/20168031/ironman/8221",
+      },
+      "Breaking down why ClickHouse chose column-based storage and how it differs from traditional OLTP/OLAP databases.",
+      "Exploring MergeTree family engines and their real-world use cases.",
+      "Walking through streaming integrations with Kafka and batch ingestion best practices.",
+      "Deploying ClickHouse in a Kubernetes environment and even digging into MergeTree internals from the source code to understand its 6 core mechanisms.",
+      "applied these learnings at work, achieving 10x storage savings (400GB → 40GB) by optimizing schema design and leveraging ClickHouse’s compression and engine capabilities.",
+    ],
+  },
   {
     title: "Software Engineering Practice Award",
     subtitle: "2025 Coding 101",
@@ -233,12 +213,16 @@ export const techstack_list = [
     logo: "/prisma.png",
   },
   {
-    name: "postgresql",
-    logo: "/postgresql.png",
+    name: "k8s",
+    logo: "/k8s.png",
   },
   {
-    name: "mysql",
-    logo: "/mysql.svg",
+    name: "clickhouse",
+    logo: "/clickhouse.svg",
+  },
+  {
+    name: "postgresql",
+    logo: "/postgresql.png",
   },
   {
     name: "mongodb",
@@ -253,24 +237,8 @@ export const techstack_list = [
     logo: "/langchain.jpg",
   },
   {
-    name: "wagmi",
-    logo: "/wagmi.png",
-  },
-  {
-    name: "docker",
-    logo: "/docker.png",
-  },
-  {
-    name: "github-actions",
-    logo: "/github-actions.png",
-  },
-  {
     name: "redis",
     logo: "/redis.png",
-  },
-  {
-    name: "websocket",
-    logo: "/websocket.png",
   },
 ];
 

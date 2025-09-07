@@ -76,6 +76,21 @@ const enTranslations = {
     "Built an automated ETL pipeline using Apache Airflow to streamline data processing and analytics workflows.",
   "Implemented ClickHouse database solutions for data compression and cold storage migration strategies.":
     "Implemented ClickHouse database solutions for data compression and cold storage migration strategies.",
+  "Database Bottom-Level Architecture to Application Practice":
+    "Database Bottom-Level Architecture to Application Practice",
+  "2025 iThome Ironman Challnge": "2025 iThome Ironman Challnge",
+  "Completed 30 days of writing articles on ClickHouse, covering from the bottom of the database to the application layer.":
+    "Completed 30 days of writing articles on ClickHouse, covering from the bottom of the database to the application layer.",
+  "Breaking down why ClickHouse chose column-based storage and how it differs from traditional OLTP/OLAP databases.":
+    "Breaking down why ClickHouse chose column-based storage and how it differs from traditional OLTP/OLAP databases.",
+  "Exploring MergeTree family engines and their real-world use cases.":
+    "Exploring MergeTree family engines and their real-world use cases.",
+  "Walking through streaming integrations with Kafka and batch ingestion best practices.":
+    "Walking through streaming integrations with Kafka and batch ingestion best practices.",
+  "Deploying ClickHouse in a Kubernetes environment and even digging into MergeTree internals from the source code to understand its 6 core mechanisms.":
+    "Deploying ClickHouse in a Kubernetes environment and even digging into MergeTree internals from the source code to understand its 6 core mechanisms.",
+  "applied these learnings at work, achieving 10x storage savings (400GB → 40GB) by optimizing schema design and leveraging ClickHouse’s compression and engine capabilities.":
+    "applied these learnings at work, achieving 10x storage savings (400GB → 40GB) by optimizing schema design and leveraging ClickHouse’s compression and engine capabilities.",
 };
 
 const zhTWTranslations = {
@@ -149,6 +164,21 @@ const zhTWTranslations = {
     "使用 Apache Airflow 建立自動化 ETL Pipeline，簡化資料處理和分析工作流程。",
   "Implemented ClickHouse database solutions for improving data compression and cold storage migration strategies.":
     "使用 ClickHouse 資料庫，優化資料壓縮和冷儲存轉移策略。",
+  "2025 iThome Ironman Challnge": "2025 iThome 鐵人賽",
+  "Database Bottom-Level Architecture to Application Practice":
+    "ClickHouse 系列：從資料庫底層架構到軟體應用實踐",
+  "Completed 30 days of writing articles on ClickHouse, covering from the bottom of the database to the application layer.":
+    "撰寫 30 天的 ClickHouse 系列文章，涵蓋從資料庫底層架構到軟體應用實踐。",
+  "Breaking down why ClickHouse chose column-based storage and how it differs from traditional OLTP/OLAP databases.":
+    "探討 ClickHouse 為何選擇列式儲存，以及與傳統 OLTP/OLAP 資料庫的差異。",
+  "Exploring MergeTree family engines and their real-world use cases.":
+    "探索 MergeTree 系列引擎及其實際應用案例。",
+  "Walking through streaming integrations with Kafka and batch ingestion best practices.":
+    "探討串流整合 Kafka 和批次資料導入的最佳實踐。",
+  "Deploying ClickHouse in a Kubernetes environment and even digging into MergeTree internals from the source code to understand its 6 core mechanisms.":
+    "在 Kubernetes 部署 ClickHouse，並從開源程式碼中理解 MergeTree 其 6 大核心機制。",
+  "applied these learnings at work, achieving 10x storage savings (400GB → 40GB) by optimizing schema design and leveraging ClickHouse’s compression and engine capabilities.":
+    "將這些學習應用於實習中，利用 ClickHouse 的壓縮和引擎功能，節省 10 倍儲存空間（400GB→40GB）。",
 };
 
 // 資源配置
