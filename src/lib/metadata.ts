@@ -8,4 +8,3 @@ export const metadata = {
     icon: "/icon.svg",
   },
 };
-

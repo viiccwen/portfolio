@@ -55,7 +55,10 @@ export const InfoBlock = ({ lang, setLang }: InfoBlockProps) => {
           </p>
 
           <div className="flex items-center gap-2">
-            <Badge variant={"default"} className="bg-blue-500 hover:bg-blue-600">
+            <Badge
+              variant={"default"}
+              className="bg-blue-500 hover:bg-blue-600"
+            >
               Currently Employed
             </Badge>
 

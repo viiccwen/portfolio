@@ -45,7 +45,9 @@ export default function About() {
             <section className="w-full min-w-0">
               <h2 className="mb-4 text-lg font-semibold">{t("ABOUT")}</h2>
               <div className="space-y-4 text-muted-foreground">
-                <p className="wrap-break-word">{t(about_content.introduction)}</p>
+                <p className="wrap-break-word">
+                  {t(about_content.introduction)}
+                </p>
                 <p className="wrap-break-word">{t(about_content.conclusion)}</p>
               </div>
             </section>

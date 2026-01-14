@@ -44,7 +44,9 @@ export const ExperienceCard = ({
           <div className="flex-1 sm:text-left min-w-0">
             <h3 className="font-semibold wrap-break-word">{t(title)}</h3>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-              <p className="text-sm text-muted-foreground wrap-break-word">{t(subtitle)}</p>
+              <p className="text-sm text-muted-foreground wrap-break-word">
+                {t(subtitle)}
+              </p>
               {text && (
                 <>
                   <p className="text-sm text-muted-foreground hidden sm:block shrink-0">
