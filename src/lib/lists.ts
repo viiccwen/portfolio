@@ -86,7 +86,7 @@ export const open_source_list: experience_type[] = [
     description: [
       {
         text: "Contributed to Apache Airflow, including api server feature & fixes.",
-        link: "https://github.com/apache/airflow/pulls?q=is%3Apr+is%3Amerged+author%3Aviiccwen",
+        link: "https://github.com/apache/airflow/pulls?q=is%3Apr+author%3Aviiccwen",
       },
     ],
   },
@@ -97,20 +97,20 @@ export const open_source_list: experience_type[] = [
     logo: "/mahout.jpg",
     description: [
       {
-        text: "Contributed to Apache Mahout, including fixes & documentation.",
-        link: "https://github.com/apache/mahout/pulls?q=is%3Apr+is%3Amerged+author%3Aviiccwen",
+        text: "Contributed 10+ PRs focused on designing & optimizing CUDA kernels.",
+        link: "https://github.com/apache/mahout/pulls?q=is%3Apr+author%3Aviiccwen",
       },
     ],
   },
   {
     title: "Astronomer Dag-factory",
-    subtitle: "1.4k stars • Top 7 contributor",
+    subtitle: "1.4k stars • Top 6 contributor",
     period: "July 2025 - Present",
     logo: "/astronomer.jpeg",
     description: [
       {
-        text: "Top 7 contributor with over 7 PRs merged, including breaking changes & fixes.",
-        link: "https://github.com/astronomer/dag-factory/pulls?q=is%3Apr+is%3Amerged+author%3Aviiccwen",
+        text: "Contributed 5+ PRs focused on improving DAG generation & version migration.",
+        link: "https://github.com/astronomer/dag-factory/pulls?q=is%3Apr+author%3Aviiccwen",
       },
     ],
   },
