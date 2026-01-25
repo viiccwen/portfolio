@@ -20,7 +20,7 @@ export async function getStargazersCount(
     if (!response.ok) {
       if (response.status === 403) {
         console.warn(
-          `GitHub API rate limit reached for ${owner}/${repo}. Consider adding VITE_GITHUB_TOKEN.`
+          `GitHub API rate limit reached for ${owner}/${repo}.`
         );
       }
       throw new Error(
