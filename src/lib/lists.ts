@@ -14,6 +14,13 @@ type experience_type = {
   description?: (string | { text: string; link?: string })[];
 };
 
+type open_source_type = experience_type & {
+  repository?: {
+    owner: string;
+    repo: string;
+  };
+};
+
 type presentation_type = experience_type & {
   text: string;
   link: string;
@@ -77,12 +84,16 @@ export const education_list: experience_type[] = [
   },
 ];
 
-export const open_source_list: experience_type[] = [
+export const open_source_list: open_source_type[] = [
   {
     title: "Apache Airflow",
-    subtitle: "43.8k stars • Contributor",
+    subtitle: "Contributor",
     period: "July 2025 - Present",
     logo: "/airflow.png",
+    repository: {
+      owner: "apache",
+      repo: "airflow",
+    },
     description: [
       {
         text: "Contributed to Apache Airflow, including api server feature & fixes.",
@@ -92,9 +103,13 @@ export const open_source_list: experience_type[] = [
   },
   {
     title: "Apache Mahout",
-    subtitle: "2.2k stars • Contributor",
+    subtitle: "Contributor",
     period: "Jan 2026 - Present",
     logo: "/mahout.jpg",
+    repository: {
+      owner: "apache",
+      repo: "mahout",
+    },
     description: [
       {
         text: "Contributed 10+ PRs focused on designing & optimizing CUDA kernels.",
@@ -104,9 +119,13 @@ export const open_source_list: experience_type[] = [
   },
   {
     title: "Astronomer Dag-factory",
-    subtitle: "1.4k stars • Top 6 contributor",
+    subtitle: "Top 6 contributor",
     period: "July 2025 - Present",
     logo: "/astronomer.jpeg",
+    repository: {
+      owner: "astronomer",
+      repo: "dag-factory",
+    },
     description: [
       {
         text: "Contributed 5+ PRs focused on improving DAG generation & version migration.",

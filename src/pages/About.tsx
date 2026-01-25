@@ -16,6 +16,7 @@ import {
 } from "@/lib/lists";
 import { InfoBlock } from "@/components/customs/info-block";
 import i18n from "@/lib/i18n";
+import { getStargazersCount, formatStarCount } from "@/lib/github";
 
 export default function About() {
   const [lang, setLang] = useState(() => {
@@ -25,9 +26,38 @@ export default function About() {
     return "en-US";
   });
 
+  const [starCounts, setStarCounts] = useState<Record<string, number>>({});
+
   useEffect(() => {
     i18n.changeLanguage(lang);
   }, [lang]);
+
+  useEffect(() => {
+    const fetchStarCounts = async () => {
+      const counts: Record<string, number> = {};
+
+      await Promise.all(
+        open_source_list.map(async (item) => {
+          if (item.repository) {
+            const key = `${item.repository.owner}/${item.repository.repo}`;
+            try {
+              const count = await getStargazersCount(
+                item.repository.owner,
+                item.repository.repo
+              );
+              counts[key] = count;
+            } catch (error) {
+              console.error(`Failed to fetch stars for ${key}:`, error);
+            }
+          }
+        })
+      );
+
+      setStarCounts(counts);
+    };
+
+    fetchStarCounts();
+  }, []);
 
   const { t } = useTranslation("translation", { i18n });
   const techstacks = [...techstack_list, ...techstack_list];
@@ -68,16 +98,26 @@ export default function About() {
             <section className="w-full min-w-0">
               <h2 className="mb-4 text-lg font-semibold">{t("OPEN SOURCE")}</h2>
               <div className="space-y-4">
-                {open_source_list.map((open_source, index) => (
-                  <ExperienceCard
-                    key={`open-source-${index}`}
-                    title={open_source.title}
-                    subtitle={open_source.subtitle}
-                    period={open_source.period}
-                    logo={open_source.logo}
-                    description={open_source.description}
-                  />
-                ))}
+                {open_source_list.map((open_source, index) => {
+                  let subtitle = open_source.subtitle;
+                  if (open_source.repository) {
+                    const key = `${open_source.repository.owner}/${open_source.repository.repo}`;
+                    const starCount = starCounts[key];
+                    if (starCount !== undefined) {
+                      subtitle = `${formatStarCount(starCount)} stars • ${open_source.subtitle}`;
+                    }
+                  }
+                  return (
+                    <ExperienceCard
+                      key={`open-source-${index}`}
+                      title={open_source.title}
+                      subtitle={subtitle}
+                      period={open_source.period}
+                      logo={open_source.logo}
+                      description={open_source.description}
+                    />
+                  );
+                })}
               </div>
             </section>
 
